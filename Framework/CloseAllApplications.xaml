@@ -22,6 +22,8 @@
       <x:String>UiPath.Core</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -43,16 +45,26 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Here all working applications will be soft closed&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications closed" DisplayName="Normal App Closing Sequence" sap:VirtualizedContainerService.HintSize="376,317" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Here all working applications will be soft closed&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications closed" DisplayName="Normal App Closing Sequence" sap:VirtualizedContainerService.HintSize="476,463" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Closing applications...&quot;]" />
-    <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+    <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Closing applications...&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'RASOtomas Page'" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0cfb259cc2f2efca45f394229ca046f6" Selector="&lt;html app='chrome.exe' url='*tur-auraonline.tr.ema.pwcinternal.com*' /&gt;&#xA;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
   </Sequence>
 </Activity>

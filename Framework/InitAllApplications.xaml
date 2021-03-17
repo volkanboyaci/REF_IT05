@@ -71,7 +71,6 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="797,1316" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -102,7 +101,7 @@
                 <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
                 <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[auraPageExists]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5439894-6770-4dd3-8554-ec24dea8f343" InformativeScreenshot="8ae4684ab06ae0a0ab427daf905b6b49" Selector="&lt;html app='chrome.exe' url='*tur-auraonline.tr.ema.pwcinternal.com*' /&gt;&lt;webctrl src='/Content/images/logo-aura.png' tag='IMG' /&gt;" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5439894-6770-4dd3-8554-ec24dea8f343" InformativeScreenshot="8ae4684ab06ae0a0ab427daf905b6b49" Selector="&lt;html app='chrome.exe' url='*tur-auraonline.tr.ema.pwcinternal.com*' /&gt;&lt;webctrl src='/Content/images/logo-aura.png' tag='IMG' /&gt;" TimeoutMS="30000" WaitForReady="INTERACTIVE" />
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
               </Sequence>
